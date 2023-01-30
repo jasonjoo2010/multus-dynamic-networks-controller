@@ -256,7 +256,8 @@ func (pnc *PodNetworksController) handleDynamicInterfaceRequest(dynamicAttachmen
 	if dynamicAttachmentRequest.Type == add {
 		return pnc.addNetworks(dynamicAttachmentRequest)
 	} else if dynamicAttachmentRequest.Type == remove {
-		return pnc.removeNetworks(dynamicAttachmentRequest)
+		// return pnc.removeNetworks(dynamicAttachmentRequest)
+		return nil
 	} else {
 		klog.Infof("very weird attachment request: %+v", dynamicAttachmentRequest)
 	}
